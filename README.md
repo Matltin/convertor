@@ -1,6 +1,6 @@
 # curl-httpie-converter
 
-A simple command-line tool to convert between curl and HTTPie command formats.
+GO CLI tool to convert between curl and HTTPie command formats.
 
 ## What it does
 
