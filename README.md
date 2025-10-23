@@ -5,7 +5,7 @@ GO CLI tool to convert between curl and HTTPie command formats.
 ## What it does
 
 Converts HTTP requests between two popular formats:
-- **curl** → **HTTPie**
+- **curl** → **HTTPie** (default)
 - **HTTPie** → **curl**
 
 Useful when you're working with different tools or sharing API examples with your team.
@@ -16,17 +16,19 @@ go build -o converter main.go
 ```
 
 ## Usage
+
+Basic usage (converts curl to HTTPie by default):
 ```bash
-./converter -from curl -to httpie
+./converter
 ```
 
-Then paste your command and press `Ctrl+D` (or `Cmd+D` on Mac).
+Then paste your curl command and press `Ctrl+D` (or `Cmd+D` on Mac).
 
 ### Examples
 
-**Convert curl to HTTPie:**
+**Convert curl to HTTPie (default):**
 ```bash
-./converter -from curl -to httpie
+./converter
 ```
 
 Paste:
@@ -56,8 +58,8 @@ curl https://api.example.com/users -X POST -H 'Authorization: Bearer token123' -
 
 ## Flags
 
-- `-from` - Input format (`curl` or `httpie`)
-- `-to` - Output format (`curl` or `httpie`)
+- `-from` - Input format (`curl` or `httpie`, default: `curl`)
+- `-to` - Output format (`curl` or `httpie`, default: `httpie`)
 
 ## Features
 

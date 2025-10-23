@@ -12,7 +12,7 @@ import (
 
 func main() {
 	fromFlag := flag.String("from", "curl", "Input format: curl or httpie")
-	toFlag := flag.String("to", "curl", "Output format: curl or httpie")
+	toFlag := flag.String("to", "httpie", "Output format: curl or httpie")
 	flag.Parse()
 
 	inputFormat := strings.ToLower(*fromFlag)
